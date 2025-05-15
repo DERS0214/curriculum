@@ -28,7 +28,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 2%; /* Espaciado responsivo con porcentaje */
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -41,8 +41,7 @@ header {
     background-color: #2c3e50;
     color: white;
     text-align: center;
-    padding: 0px 20px 40px;
-   
+    padding: 0px 20px 40px; /* Se eliminó el padding-top inicial */
 }
 
 main {
@@ -75,6 +74,13 @@ footer {
 }
 
 /* Responsive para móvil */
+@media (max-width: 768px) {
+    nav a {
+        margin: 0 1%; /* Reducir el margen en pantallas medianas */
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 600px) {
     nav {
         flex-direction: row;
@@ -84,12 +90,12 @@ footer {
     }
 
     nav a {
-        margin: 5px 10px;
-        font-size: 14px;
+        margin: 5px 1%; /* Ajustar aún más el margen para móviles */
+        font-size: 12px;
     }
 
     header {
-        padding-top: 120px;
+        padding-top: 120px; /* Se mantiene el padding-top para el header en móvil */
     }
 
     main {
