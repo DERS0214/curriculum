@@ -17,11 +17,22 @@ header {
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     background-color: #34495e;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    padding: 80px 20px 20px; /* Añade espacio arriba para compensar la nav fija */
+    max-width: 900px;
+    margin: auto;
 }
 
 nav a {
@@ -74,3 +85,4 @@ footer {
         margin: 10px 0;
     }
 }
+
