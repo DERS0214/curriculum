@@ -11,18 +11,17 @@
 </head>
 <body>
 
-  <!-- ✅ Menú hamburguesa funcional -->
   <input type="checkbox" id="menu-toggle" />
-  <label for="menu-toggle" class="menu-icon">&#9776;</label>
-
-  <!-- ✅ Botón de tema fuera del flujo del toggle -->
+  <label for="menu-toggle" class="menu-icon">☰</label>
 
   <nav class="menu">
-    <a href="#info-personal">Información Personal</a>
-    <a href="#formacion">Formación</a>
-    <a href="#experiencia">Experiencia</a>
-    <a href="#tecnologias">Tecnologías</a>
-    <a href="#contacto">Contacto</a>
+    <a href="#sobre-mi">Sobre Mí</a>
+    <a href="#educacion">Educación</a>
+    <a href="#laboral">Experiencia Laboral</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#stack">Tecnologías</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#redes">Redes y Contacto</a>
   </nav>
 
   <button id="toggle-theme" class="theme-button">🌙</button>
@@ -33,45 +32,62 @@
   </header>
 
   <main>
-    <section id="info-personal" class="seccion info">
-      <h2>Información Personal</h2>
+    <section id="sobre-mi" class="seccion personal">
+      <h2>Sobre Mí</h2>
       <p>
-        Soy estudiante de sexto semestre de Ingeniería en Computación con experiencia en desarrollo de software, mantenimiento de hardware y asesoramiento técnico. Me destaco por mi curiosidad, aprendizaje rápido y enfoque en la resolución de problemas, aplicando tecnología en proyectos innovadores. Busco oportunidades para aplicar mis conocimientos y crecer profesionalmente en tecnología.
+        Soy estudiante de sexto semestre de Ingeniería en Computación en la <strong><a href="https://www.fiec.espol.edu.ec/es/carreras-de-grado/computacion" target="_blank">ESPOL</a></strong>, con experiencia en desarrollo de software, mantenimiento de hardware y asesoramiento técnico. Me destaco por mi curiosidad, aprendizaje rápido y enfoque en la resolución de problemas. Busco oportunidades para crecer profesionalmente aplicando tecnología.
       </p>
     </section>
 
-    <section id="formacion" class="seccion formacion">
-      <h2>Formación Académica</h2>
+    <section id="educacion" class="seccion educacion">
+      <h2>Educación</h2>
       <ul>
         <li><strong>Ingeniería en Computación</strong> (2022 - Presente) - ESPOL</li>
         <li><strong>Bachillerato Técnico en Computación</strong> (2016 - 2022) - ANAI</li>
       </ul>
     </section>
 
-    <section id="experiencia" class="seccion experiencia">
-      <h2>Experiencia Profesional</h2>
-      <p><strong>Asesor de Ventas (Medio Tiempo)</strong> – TECNICENTRO AGUILAR MORA (2024 - Presente)</p>
+    <section id="laboral" class="seccion laboral">
+      <h2>Experiencia Laboral</h2>
+      <p><strong>Asesor de Ventas (Medio Tiempo)</strong> – Tecnicentro Aguilar Mora (2024 - Presente)</p>
       <p>Atención al cliente y recomendación de servicios para el mantenimiento automotriz.</p>
     </section>
 
-    <section id="tecnologias" class="seccion tecnologias">
-      <h2>Herramientas y Tecnologías</h2>
+    <section id="habilidades" class="seccion habilidades">
+      <h2>Habilidades y Herramientas</h2>
+      <p>He trabajado con diversos lenguajes y frameworks como Java, Python, Dart, Spring Boot, JavaFX, y herramientas como Docker, Postman, y Google Cloud. También manejo bases de datos como MySQL y herramientas de diseño como Figma, Canva y Notion.</p>
+    </section>
+
+    <section id="stack" class="seccion carrera">
+      <h2>Tecnologías</h2>
       <ul>
-        <li><strong>Lenguajes:</strong> Java (Avanzado), Python (Intermedio), Dart, PHP, Ruby (Básico), aprendiendo JS, CSS, C#.</li>
-        <li><strong>Frameworks:</strong> JavaFX, Flutter, Spring Boot, NumPy.</li>
-        <li><strong>Servicios:</strong> Firebase, Google Cloud, Docker.</li>
-        <li><strong>Desarrollo:</strong> Arduino, Postman, VS Code, NetBeans, Eclipse, PyCharm.</li>
-        <li><strong>Bases de datos:</strong> MySQL (Intermedio).</li>
-        <li><strong>Diseño:</strong> Canva, Figma, Notion.</li>
-        <li><strong>Versionamiento:</strong> GitHub.</li>
+        <li><strong>Lenguajes:</strong> Java, Python, Dart, PHP, Ruby, R, JavaScript, C#.</li>
+        <li><strong>Frameworks:</strong> Spring Boot, JavaFX, Flutter, NumPy.</li>
+        <li><strong>Servicios:</strong> Firebase, Google Cloud.</li>
+        <li><strong>Herramientas:</strong> Postman, Docker, Arduino.</li>
+        <li><strong>Diseño y Productividad:</strong> Canva, Figma, Notion.</li>
+        <li><strong>Bases de datos:</strong> MySQL.</li>
+        <li><strong>Control de Versiones:</strong> GitHub.</li>
       </ul>
     </section>
 
-    <section id="contacto" class="seccion contacto">
-      <h2>Contacto</h2>
+    <section id="proyectos" class="seccion proyectos">
+      <h2>Proyectos Destacados</h2>
+      <ul>
+        <li><a href="https://github.com/kathyforero/LP-FINAL" target="_blank">LP-FINAL</a> - Proyecto final de lenguajes de programación en equipo.</li>
+        <li><a href="https://github.com/kathyforero/ProyectoPHP-AnalizadoresLSS" target="_blank">ProyectoPHP-AnalizadoresLSS</a> - Analizadores léxicos y sintácticos en PHP.</li>
+        <li><a href="https://github.com/kathyforero/Proyecto-EstructurasDeDatos" target="_blank">Proyecto-EstructurasDeDatos</a> - Estructuras de datos en Java.</li>
+        <li><a href="https://github.com/DERS0214/ESTADISTICA-PROYECTO" target="_blank">ESTADISTICA-PROYECTO</a> - Análisis estadístico con R.</li>
+        <li><a href="https://github.com/DERS0214/ED-Proyecto-2P" target="_blank">ED-Proyecto-2P</a> - Juego de preguntas en Java con árboles.</li>
+      </ul>
+    </section>
+
+    <section id="redes" class="seccion contacto">
+      <h2>Redes y Contacto</h2>
       <p>Email: <a href="mailto:dramirez021487@gmail.com">dramirez021487@gmail.com</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/ders0214/" target="_blank">linkedin.com/in/ders0214</a></p>
       <p>GitHub: <a href="https://github.com/DERS0214" target="_blank">github.com/DERS0214</a></p>
+      <p>Instagram: <a href="https://instagram.com/DERS0214" target="_blank">@DERS0214</a></p>
     </section>
   </main>
 
@@ -79,22 +95,15 @@
     <p>&copy; 2025 David Ramírez - Todos los derechos reservados.</p>
   </footer>
 
-  <!-- 🌙 Script para cambiar tema -->
   <script>
     const toggleBtn = document.getElementById('toggle-theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const savedTheme = localStorage.getItem('theme');
 
     const applyTheme = (theme) => {
       document.documentElement.setAttribute('data-theme', theme);
       toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
     };
 
-    if (savedTheme) {
-      applyTheme(savedTheme);
-    } else {
-      applyTheme(prefersDark ? 'dark' : 'light');
-    }
 
     toggleBtn.addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-theme');

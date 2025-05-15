@@ -108,13 +108,15 @@ main {
     padding-left: 12px;
 }
 
-.seccion.info       { border-left: 5px solid #3b82f6; }
-.seccion.formacion  { border-left: 5px solid #f59e0b; }
-.seccion.experiencia{ border-left: 5px solid #10b981; }
-.seccion.tecnologias{ border-left: 5px solid #8b5cf6; }
-.seccion.contacto   { border-left: 5px solid #ef4444; }
+.seccion.personal     { border-left: 5px solid #3b82f6; }
+.seccion.educacion    { border-left: 5px solid #f59e0b; }
+.seccion.laboral      { border-left: 5px solid #10b981; }
+.seccion.habilidades  { border-left: 5px solid rgb(126, 41, 90); }
+.seccion.carrera      { border-left: 5px solid rgb(68, 239, 139); }
+.seccion.proyectos    { border-left: 5px solid #6366f1; } 
+.seccion.contacto     { border-left: 5px solid #ef4444; }
 
-/* OVERRIDE en modo oscuro para bordes más suaves */
+
 :root[data-theme='dark'] .seccion h2 {
     color: var(--color-acento);
 }
@@ -125,7 +127,6 @@ footer {
     background-color: var(--color-header);
     color: white;
     padding: 15px;
-    margin-top: 40px;
 }
 
 /* MENU HAMBURGUESA */
