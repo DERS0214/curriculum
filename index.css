@@ -22,16 +22,21 @@ nav {
     width: 100%;
     z-index: 1000;
     background-color: #34495e;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    overflow-x: auto;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: auto;
     scrollbar-width: none; /* Firefox */
 }
 
-nav::-webkit-scrollbar {
+.nav-container::-webkit-scrollbar {
     display: none; /* Chrome, Safari */
 }
 
@@ -41,7 +46,6 @@ nav a {
     margin: 0 15px;
     font-weight: bold;
     white-space: nowrap;
-    flex-shrink: 0;
     transition: color 0.3s ease;
 }
 
@@ -78,7 +82,7 @@ footer {
 
 /* Responsive para móvil */
 @media (max-width: 600px) {
-    nav {
+    .nav-container {
         justify-content: flex-start;
     }
 
