@@ -14,6 +14,7 @@ header {
     color: white;
     padding: 30px 20px;
     text-align: center;
+    margin-top: 60px; /* para no ser tapado por nav fija */
 }
 
 nav {
@@ -25,14 +26,8 @@ nav {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 8px 0;
+    padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-main {
-    padding: 80px 20px 20px; /* Añade espacio arriba para compensar la nav fija */
-    max-width: 900px;
-    margin: auto;
 }
 
 nav a {
@@ -48,7 +43,7 @@ nav a:hover {
 }
 
 main {
-    padding: 20px;
+    padding: 160px 20px 20px; /* espacio para nav + header fijo */
     max-width: 900px;
     margin: auto;
 }
@@ -77,18 +72,28 @@ footer {
 /* Responsive para móvil */
 @media (max-width: 600px) {
     nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 5px 0;
+        flex-direction: column;
+        align-items: center;
     }
 
     nav a {
-        margin: 5px 10px;
+        margin: 10px 0;
         font-size: 14px;
     }
 
+    header {
+        padding: 15px 10px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
     main {
-        padding: 100px 10px 20px; /* ajustamos margen por nav más alta */
+        padding: 160px 10px 20px;
     }
 }
