@@ -14,7 +14,6 @@ header {
     color: white;
     padding: 30px 20px;
     text-align: center;
-    margin-top: 60px; /* para no ser tapado por nav fija */
 }
 
 nav {
@@ -24,10 +23,16 @@ nav {
     z-index: 1000;
     background-color: #34495e;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    scrollbar-width: none; /* Firefox */
+}
+
+nav::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
 }
 
 nav a {
@@ -35,6 +40,8 @@ nav a {
     text-decoration: none;
     margin: 0 15px;
     font-weight: bold;
+    white-space: nowrap;
+    flex-shrink: 0;
     transition: color 0.3s ease;
 }
 
@@ -43,7 +50,7 @@ nav a:hover {
 }
 
 main {
-    padding: 160px 20px 20px; /* espacio para nav + header fijo */
+    padding: 100px 20px 20px; /* Ajuste por nav fijo */
     max-width: 900px;
     margin: auto;
 }
@@ -72,28 +79,15 @@ footer {
 /* Responsive para móvil */
 @media (max-width: 600px) {
     nav {
-        flex-direction: column;
-        align-items: center;
+        justify-content: flex-start;
     }
 
     nav a {
-        margin: 10px 0;
+        margin: 0 10px;
         font-size: 14px;
     }
 
-    header {
-        padding: 15px 10px;
-    }
-
-    header h1 {
-        font-size: 22px;
-    }
-
-    header p {
-        font-size: 16px;
-    }
-
     main {
-        padding: 160px 10px 20px;
+        padding: 140px 10px 20px;
     }
 }
