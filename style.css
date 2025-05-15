@@ -18,9 +18,9 @@ nav {
     width: 100%;
     background-color: #34495e;
     display: flex;
-    justify-content: flex-start; /* Alinea los elementos al inicio y luego distribuye el espacio */
+    justify-content: center; /* Centrado por defecto para escritorio */
     flex-wrap: wrap;
-    padding: 10px 20px; /* Añadimos un poco de padding lateral al nav */
+    padding: 10px 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -28,7 +28,7 @@ nav {
 nav a {
     color: white;
     text-decoration: none;
-    margin: 5px 15px; /* Espaciado fijo entre elementos en escritorio */
+    margin: 5px 15px; /* Espaciado para escritorio */
     font-weight: bold;
     transition: color 0.3s ease;
 }
@@ -41,7 +41,7 @@ header {
     background-color: #2c3e50;
     color: white;
     text-align: center;
-    padding: 40px 20px; /* Ajusté el padding superior para escritorio */
+    padding: 80px 20px 40px; /* Ajusté el padding superior para evitar el solapamiento */
 }
 
 main {
@@ -76,40 +76,41 @@ footer {
 /* Para pantallas de escritorio más anchas */
 @media (min-width: 992px) {
     nav {
-        justify-content: center; /* Volvemos a centrar en escritorio */
+        justify-content: center;
     }
 
     nav a {
-        margin: 5px 20px; /* Aumentamos un poco el margen en escritorio */
+        margin: 5px 20px;
     }
 }
 
 /* Responsive para tablets y pantallas medianas */
 @media (max-width: 991px) and (min-width: 769px) {
     nav {
-        justify-content: space-around; /* Distribuye el espacio en pantallas medianas */
+        justify-content: space-around;
         padding: 10px 20px;
     }
 
     nav a {
-        margin: 5px 1.5%; /* Ajuste de margen para pantallas medianas */
+        margin: 5px 1.5%;
     }
 }
 
 /* Responsive para móvil */
 @media (max-width: 768px) {
     nav {
-        justify-content: space-between; /* Distribuye el espacio entre los ítems */
-        padding: 10px 20px; /* Añade un poco de padding lateral */
+        flex-direction: row; /* Volvemos a una fila */
+        justify-content: space-around; /* Espacio entre los elementos */
+        padding: 5px 10px; /* Reducimos el padding */
     }
 
     nav a {
-        margin: 10px 0; /* Aumenta el margen vertical para mejor separación en móvil */
-        font-size: 14px;
+        margin: 5px 0; /* Reducimos el margen horizontal */
+        font-size: 14px; /* Mantenemos un tamaño de fuente adecuado */
     }
 
     header {
-        padding-top: 100px; /* Ajusté el padding superior para móvil */
+        padding-top: 140px; /* Aumentamos el padding para evitar el solapamiento */
     }
 
     main {
@@ -119,25 +120,26 @@ footer {
 
 @media (max-width: 600px) {
     nav {
-        flex-direction: column; /* Apila los elementos en columnas en pantallas muy pequeñas */
-        align-items: center; /* Centra los elementos horizontalmente */
-        padding: 10px 0;
+        flex-direction: column;
+        align-items: center;
+        padding: 5px 0;
     }
 
     nav a {
-        margin: 10px 0;
-        width: 100%; /* Ocupa todo el ancho disponible */
-        text-align: center; /* Centra el texto dentro del enlace */
-        padding: 10px 0; /* Añade un poco de padding vertical */
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Opcional: separadores */
+        margin: 8px 0; /* Ajustamos el margen vertical */
+        width: 100%;
+        text-align: center;
+        padding: 8px 0; /* Reducimos el padding vertical */
+        font-size: 16px; /* Aumentamos un poco el tamaño en vertical */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     nav a:last-child {
-        border-bottom: none; /* Evita el borde inferior en el último elemento */
+        border-bottom: none;
     }
 
     header {
-        padding-top: 120px; /* Mantenemos el padding-top para el header en móvil */
+        padding-top: 160px; /* Aumentamos aún más el padding si es necesario */
     }
 
     main {
