@@ -121,6 +121,31 @@ main {
     color: var(--color-acento);
 }
 
+/* FOTO PERFIL */
+.foto-perfil {
+    display: block;
+    margin: 0 auto 18px auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 16px rgba(60,60,60,0.18);
+    border: 3px solid #fff;
+    background: #fff;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.foto-perfil:focus {
+    outline: none;
+    box-shadow: 0 4px 16px rgba(60,60,60,0.18);
+}
+
+:root[data-theme='dark'] .foto-perfil {
+    border-color: #60a5fa; /* azul claro de la paleta dark */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+    background: #222;
+}
+
 /* FOOTER */
 footer {
     text-align: center;
@@ -188,6 +213,154 @@ footer {
     opacity: 0.8;
 }
 
+/* MARCO DEL MAPA */
+.mapa-fiec {
+    border: 1px solid #111827; /* negro por defecto (tema claro) */
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+:root[data-theme='dark'] .mapa-fiec {
+    border-color: #fff;
+}
+
+
+/* FORMULARIO */
+form {
+    background: var(--color-tarjeta);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 28px 22px 22px 22px;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+form label, form legend {
+    font-weight: 700;
+    color: var(--color-header);
+    margin-bottom: 4px;
+    letter-spacing: 0.01em;
+}
+:root[data-theme='dark'] form label,
+:root[data-theme='dark'] form legend {
+    color: var(--color-acento);
+}
+form input[type="text"],
+form select,
+form textarea {
+    padding: 8px 10px;
+    border: 1.5px solid var(--color-borde);
+    border-radius: 6px;
+    font-size: 1rem;
+    background: var(--color-fondo);
+    color: var(--color-texto);
+    transition: border-color 0.2s;
+}
+form input[type="text"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: var(--color-acento);
+    outline: none;
+}
+form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+form button[type="submit"] {
+    background: var(--color-acento);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 1.08rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s, opacity 0.2s;
+}
+form button[type="submit"]:hover {
+    background: var(--color-borde);
+    opacity: 0.92;
+}
+form select[multiple] {
+    min-height: 80px;
+}
+
+/* TABLA TECNOLOGÍAS */
+.tabla-tecnologias {
+    width: 100%;
+    max-width: 500px;
+    min-width: 320px;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 0 auto 8px auto;
+    font-size: 1rem;
+    background: var(--color-tarjeta);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    text-align: center;
+}
+.tabla-tecnologias th,
+.tabla-tecnologias td {
+    padding: 10px 12px;
+    text-align: center;
+}
+.tabla-tecnologias thead th {
+    background: var(--color-header);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.05em;
+    letter-spacing: 0.01em;
+}
+.tabla-tecnologias tbody tr:nth-child(even) {
+    background: #f5f7fa;
+}
+:root[data-theme='dark'] .tabla-tecnologias tbody tr:nth-child(even) {
+    background: #1e293b;
+}
+:root[data-theme='dark'] .tabla-tecnologias thead th {
+    background: var(--color-acento);
+    color: #111827;
+}
+.tabla-tecnologias tr {
+    border-bottom: 1px solid #e5e7eb;
+}
+:root[data-theme='dark'] .tabla-tecnologias tr {
+    border-bottom: 1px solid #334155;
+}
+.tabla-tecnologias tr:last-child {
+    border-bottom: none;
+}
+.tabla-tecnologias-titulo {
+    margin-bottom: 18px;
+    font-size: 1.18em;
+    color: var(--color-header);
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    transition: color 0.3s;
+}
+:root[data-theme='dark'] .tabla-tecnologias-titulo {
+    color: var(--color-acento);
+}
+@media (max-width: 700px) {
+    .tabla-tecnologias th, .tabla-tecnologias td {
+        padding: 7px 4px;
+        font-size: 0.97em;
+    }
+    .tabla-tecnologias {
+        min-width: 0;
+        font-size: 0.97em;
+    }
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .menu-icon {
@@ -216,5 +389,11 @@ footer {
 
     main {
         margin-top: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 16px 6px 12px 6px;
     }
 }

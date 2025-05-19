@@ -27,6 +27,7 @@
   <button id="toggle-theme" class="theme-button">🌙</button>
 
   <header>
+    <img src="https://placehold.co/150x150" alt="Foto de perfil" class="foto-perfil" />
     <h1>David Ramírez</h1>
     <p>Estudiante de Ingeniería en Computación</p>
   </header>
@@ -37,14 +38,17 @@
       <p>
         Soy estudiante de sexto semestre de Ingeniería en Computación en la <strong><a href="https://www.fiec.espol.edu.ec/es/carreras-de-grado/computacion" target="_blank">ESPOL</a></strong>, con experiencia en desarrollo de software, mantenimiento de hardware y asesoramiento técnico. Me destaco por mi curiosidad, aprendizaje rápido y enfoque en la resolución de problemas. Busco oportunidades para crecer profesionalmente aplicando tecnología.
       </p>
+      <div style="margin: 32px auto; max-width: 560px;">
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/z9fS0fj-xTU" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section id="educacion" class="seccion educacion">
       <h2>Educación</h2>
-      <ul>
+      <ol>
         <li><strong>Ingeniería en Computación</strong> (2022 - Presente) - ESPOL</li>
         <li><strong>Bachillerato Técnico en Computación</strong> (2016 - 2022) - ANAI</li>
-      </ul>
+      </ol>
     </section>
 
     <section id="laboral" class="seccion laboral">
@@ -69,6 +73,47 @@
         <li><strong>Bases de datos:</strong> MySQL.</li>
         <li><strong>Control de Versiones:</strong> GitHub.</li>
       </ul>
+      <div style="margin-top:32px; text-align:center;">
+        <h3 class="tabla-tecnologias-titulo">Nivel y Experiencia en Lenguajes</h3>
+        <div style="display:flex; justify-content:center;">
+          <table class="tabla-tecnologias" style="margin:0 auto; min-width:320px; max-width:500px;">
+            <thead>
+              <tr>
+                <th>Lenguaje</th>
+                <th>Nivel</th>
+                <th>Tiempo de experiencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Python</td>
+                <td>Medio</td>
+                <td>2 años</td>
+              </tr>
+              <tr>
+                <td>Java</td>
+                <td>Avanzado</td>
+                <td>3 años</td>
+              </tr>
+              <tr>
+                <td>PHP</td>
+                <td>Básico</td>
+                <td>6 meses</td>
+              </tr>
+              <tr>
+                <td>Ruby</td>
+                <td>Básico</td>
+                <td>3 meses</td>
+              </tr>
+              <tr>
+                <td>TypeScript</td>
+                <td>Medio</td>
+                <td>6 meses</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </section>
 
     <section id="proyectos" class="seccion proyectos">
@@ -88,6 +133,51 @@
       <p>LinkedIn: <a href="https://linkedin.com/in/ders0214/" target="_blank">linkedin.com/in/ders0214</a></p>
       <p>GitHub: <a href="https://github.com/DERS0214" target="_blank">github.com/DERS0214</a></p>
       <p>Instagram: <a href="https://instagram.com/DERS0214" target="_blank">@DERS0214</a></p>
+
+      <div class="mapa-fiec">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.9642820199942!2d-79.9678577304956!3d-2.1479647999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13c1e2e2e2e3%3A0x7e2e2e2e2e2e2e2e!2sFIEC%20-%20Facultad%20de%20Ingenier%C3%ADa%20en%20Electricidad%20y%20Computaci%C3%B3n%20-%20ESPOL!5e0!3m2!1ses-419!2sec!4v1716138000000!5m2!1ses-419!2sec"
+          width="100%" height="250" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <!-- Fin mapa -->
+    </section>     
+
+    <section id="contacto-form" class="seccion contacto">
+      <h2>Formulario de Contacto</h2>
+      <form action="#" method="post" style="display: flex; flex-direction: column; gap: 18px; max-width: 500px; margin: 0 auto;">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required autocomplete="name" />
+
+        <label for="motivo">Motivo de contacto:</label>
+        <select id="motivo" name="motivo" required>
+          <option value="">Seleccione una opción</option>
+          <option value="consulta">Consulta</option>
+          <option value="propuesta">Propuesta laboral</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <fieldset style="border:none; padding:0;">
+          <legend>¿Cómo prefieres ser contactado?</legend>
+          <label><input type="radio" name="contacto" value="email" required /> Email</label>
+          <label><input type="radio" name="contacto" value="telefono" required /> Teléfono</label>
+          <label><input type="radio" name="contacto" value="whatsapp" required /> WhatsApp</label>
+        </fieldset>
+
+        <label for="lenguajes">Lenguajes de interés (puede seleccionar varios):</label>
+        <select id="lenguajes" name="lenguajes[]" multiple required size="4">
+          <option value="java">Java</option>
+          <option value="python">Python</option>
+          <option value="javascript">JavaScript</option>
+          <option value="dart">Dart</option>
+          <option value="php">PHP</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escriba su mensaje aquí..."></textarea>
+
+        <button type="submit" style="background: var(--color-acento); color: #fff; border: none; border-radius: 5px; padding: 10px 0; font-size: 1rem; font-weight: bold; cursor: pointer;">Enviar</button>
+      </form>
     </section>
   </main>
 
@@ -103,7 +193,6 @@
       document.documentElement.setAttribute('data-theme', theme);
       toggleBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
     };
-
 
     toggleBtn.addEventListener('click', () => {
       const current = document.documentElement.getAttribute('data-theme');
