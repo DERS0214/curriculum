@@ -7,7 +7,7 @@
   <meta name="description" content="Curriculum Vitae de David Ramírez - Estudiante de Ingeniería en Computación con experiencia en desarrollo de software, hardware y asesoramiento técnico." />
   <meta name="author" content="David Enrique Ramírez Scamaronez" />
   <title>CV de David Ramírez</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./stylesheets/style.css" />
 </head>
 <body>
 
@@ -27,14 +27,14 @@
   <button id="toggle-theme" class="theme-button">🌙</button>
 
   <header>
-    <img src="https://placehold.co/150x150" alt="Foto de perfil" class="foto-perfil" />
+    <img src="https://placehold.co/150x150" alt="Foto de perfil" class="foto-perfil" id="photo" />
     <h1>David Ramírez</h1>
     <p>Estudiante de Ingeniería en Computación</p>
   </header>
 
   <main>
     <section id="sobre-mi" class="seccion personal">
-      <h2>Sobre Mí</h2>
+      <h2 class="subtitle">Sobre Mí</h2>
       <p>
         Soy estudiante de sexto semestre de Ingeniería en Computación en la <strong><a href="https://www.fiec.espol.edu.ec/es/carreras-de-grado/computacion" target="_blank">ESPOL</a></strong>, con experiencia en desarrollo de software, mantenimiento de hardware y asesoramiento técnico. Me destaco por mi curiosidad, aprendizaje rápido y enfoque en la resolución de problemas. Busco oportunidades para crecer profesionalmente aplicando tecnología.
       </p>
@@ -44,7 +44,7 @@
     </section>
 
     <section id="educacion" class="seccion educacion">
-      <h2>Educación</h2>
+      <h2 class="subtitle">Educación</h2>
       <ol>
         <li><strong>Ingeniería en Computación</strong> (2022 - Presente) - ESPOL</li>
         <li><strong>Bachillerato Técnico en Computación</strong> (2016 - 2022) - ANAI</li>
@@ -52,18 +52,18 @@
     </section>
 
     <section id="laboral" class="seccion laboral">
-      <h2>Experiencia Laboral</h2>
+      <h2 class="subtitle">Experiencia Laboral</h2>
       <p><strong>Asesor de Ventas (Medio Tiempo)</strong> – Tecnicentro Aguilar Mora (2024 - Presente)</p>
       <p>Atención al cliente y recomendación de servicios para el mantenimiento automotriz.</p>
     </section>
 
     <section id="habilidades" class="seccion habilidades">
-      <h2>Habilidades y Herramientas</h2>
+      <h2 class="subtitle">Habilidades y Herramientas</h2>
       <p>He trabajado con diversos lenguajes y frameworks como Java, Python, Dart, Spring Boot, JavaFX, y herramientas como Docker, Postman, y Google Cloud. También manejo bases de datos como MySQL y herramientas de diseño como Figma, Canva y Notion.</p>
     </section>
 
     <section id="stack" class="seccion carrera">
-      <h2>Tecnologías</h2>
+      <h2 class="subtitle">Tecnologías</h2>
       <ul>
         <li><strong>Lenguajes:</strong> Java, Python, Dart, PHP, Ruby, R, JavaScript, C#.</li>
         <li><strong>Frameworks:</strong> Spring Boot, JavaFX, Flutter, NumPy.</li>
@@ -117,7 +117,7 @@
     </section>
 
     <section id="proyectos" class="seccion proyectos">
-      <h2>Proyectos Destacados</h2>
+      <h2 class="subtitle">Proyectos Destacados</h2>
       <ul>
         <li><a href="https://github.com/kathyforero/LP-FINAL" target="_blank">LP-FINAL</a> - Proyecto final de lenguajes de programación en equipo.</li>
         <li><a href="https://github.com/kathyforero/ProyectoPHP-AnalizadoresLSS" target="_blank">ProyectoPHP-AnalizadoresLSS</a> - Analizadores léxicos y sintácticos en PHP.</li>
@@ -128,7 +128,7 @@
     </section>
 
     <section id="redes" class="seccion contacto">
-      <h2>Redes y Contacto</h2>
+      <h2 class="subtitle">Redes y Contacto</h2>
       <p>Email: <a href="mailto:dramirez021487@gmail.com">dramirez021487@gmail.com</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/ders0214/" target="_blank">linkedin.com/in/ders0214</a></p>
       <p>GitHub: <a href="https://github.com/DERS0214" target="_blank">github.com/DERS0214</a></p>
@@ -143,7 +143,7 @@
     </section>     
 
     <section id="contacto-form" class="seccion contacto">
-      <h2>Formulario de Contacto</h2>
+      <h2 class="subtitle">Formulario de Contacto</h2>
       <form action="#" method="post" style="display: flex; flex-direction: column; gap: 18px; max-width: 500px; margin: 0 auto;">
         <label for="nombre">Nombre completo:</label>
         <input type="text" id="nombre" name="nombre" required autocomplete="name" />

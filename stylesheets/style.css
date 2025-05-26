@@ -39,12 +39,19 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     background-color: var(--color-fondo);
     color: var(--color-texto);
+}
+
+/* Título principal centrado y en negrita */
+h1 {
+  text-align: center;
+  font-weight: bold;
 }
 
 /* NAV */
@@ -71,6 +78,19 @@ nav a {
 
 nav a:hover {
     color: var(--color-acento);
+}
+
+nav > ul {
+  display: flex; /* Activamos flexbox */
+  flex-direction: row; /* Organizamos en fila */
+  justify-content: space-evenly; /* Espacio equitativo entre elementos */
+  align-items: center; /* Alineación vertical centrada */
+  gap: 1rem; /* Espaciado uniforme entre elementos */
+}
+
+section > ul {
+  list-style: none;
+  
 }
 
 /* HEADER */
@@ -152,6 +172,11 @@ footer {
     background-color: var(--color-header);
     color: white;
     padding: 15px;
+}
+
+footer p {
+  text-align: right;
+  font-style: italic;
 }
 
 /* MENU HAMBURGUESA */
@@ -396,4 +421,21 @@ form select[multiple] {
     form {
         padding: 16px 6px 12px 6px;
     }
+}
+
+#photo {
+  width: 16vw;
+  height: auto;
+}
+
+.subtitle {
+  color: rgb(151 156 165 / 0.89);
+  text-transform: uppercase;
+}
+
+section {
+  border: 0.2pt solid #cedddd;
+  margin: 4px 2px 8px 2px;
+  padding: 1.5% 0.8%;
+  margin-bottom: 1.2rem;
 }
