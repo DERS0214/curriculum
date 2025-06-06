@@ -147,11 +147,10 @@ main {
     margin: 0 auto 18px auto;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 90%;
     object-fit: cover;
     box-shadow: 0 4px 16px rgba(60,60,60,0.18);
-    border: 3px solid #fff;
-    background: #fff;
+    background: transparent; /* <-- Cambiado aquí */
     transition: box-shadow 0.3s, border-color 0.3s;
 }
 
@@ -161,9 +160,9 @@ main {
 }
 
 :root[data-theme='dark'] .foto-perfil {
-    border-color: #60a5fa; /* azul claro de la paleta dark */
+    border-color: #60a5fa;
     box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-    background: #222;
+    background: transparent; /* <-- Cambiado aquí */
 }
 
 /* FOOTER */
