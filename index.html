@@ -15,10 +15,8 @@
   <label for="menu-toggle" class="menu-icon">☰</label>
 
   <nav class="menu">
-    <a href="#sobre-mi">Sobre Mí</a>
     <a href="#educacion">Educación</a>
     <a href="#laboral">Experiencia Laboral</a>
-    <a href="#habilidades">Habilidades</a>
     <a href="#stack">Tecnologías</a>
     <a href="#proyectos">Proyectos</a>
     <a href="#redes">Redes y Contacto</a>
@@ -40,24 +38,45 @@
   </header>
 
   <main>
-    <section id="educacion" class="seccion educacion">
-      <h2 class="subtitle">Educación</h2>
-      <ol>
-        <li><strong>Ingeniería en Computación</strong> (2022 - Presente) - ESPOL</li>
-        <li><strong>Bachillerato Técnico en Computación</strong> (2016 - 2022) - ANAI</li>
-      </ol>
-    </section>
+    <div class="educacion-experiencia-container">
+      <section class="seccion educacion">
+        <h2 class="subtitle">Educación</h2>
+        
+        <div class="tarjeta">
+          <div class="institucion-icono">
+            <img src="resources/ESPOL.png" alt="Icono de ESPOL" class="icono-institucion" />
+          </div>
+          <div class="informacion">
+            <h3>Ingeniería en Computación</h3>
+            <p>(2022 - Presente) - ESPOL</p>
+          </div>
+        </div>
 
-    <section id="laboral" class="seccion laboral">
-      <h2 class="subtitle">Experiencia Laboral</h2>
-      <p><strong>Asesor de Ventas (Medio Tiempo)</strong> – Tecnicentro Aguilar Mora (2024 - Presente)</p>
-      <p>Atención al cliente y recomendación de servicios para el mantenimiento automotriz.</p>
-    </section>
+        <div class="tarjeta">
+          <div class="institucion-icono">
+            <img src="resources/anai.png" alt="Icono de ANAI" class="icono-institucion" />
+          </div>
+          <div class="informacion">
+            <h3>Bachillerato Técnico en Computación</h3>
+            <p>(2016 - 2022) - ANAI</p>
+          </div>
+        </div>
+      </section>
 
-    <section id="habilidades" class="seccion habilidades">
-      <h2 class="subtitle">Habilidades y Herramientas</h2>
-      <p>He trabajado con diversos lenguajes y frameworks como Java, Python, Dart, Spring Boot, JavaFX, y herramientas como Docker, Postman, y Google Cloud. También manejo bases de datos como MySQL y herramientas de diseño como Figma, Canva y Notion.</p>
-    </section>
+      <section class="seccion experiencia">
+        <h2 class="subtitle">Experiencia Laboral</h2>
+        <div class="tarjeta">
+          <div class="institucion-icono">
+            <img src="resources/TAM.png" alt="Icono de la Empresa" class="icono-institucion" />
+          </div>
+          <div class="informacion">
+            <h3>Asesor de Ventas (Medio Tiempo)</h3>
+            <p>Tecnicentro Aguilar Mora (2024 - Presente)</p>
+            <p>Atención al cliente y recomendación de servicios para el mantenimiento automotriz.</p>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <section id="stack" class="seccion carrera">
       <h2 class="subtitle">Tecnologías</h2>
@@ -115,13 +134,37 @@
 
     <section id="proyectos" class="seccion proyectos">
       <h2 class="subtitle">Proyectos Destacados</h2>
-      <ul>
-        <li><a href="https://github.com/kathyforero/LP-FINAL" target="_blank">LP-FINAL</a> - Proyecto final de lenguajes de programación en equipo.</li>
-        <li><a href="https://github.com/kathyforero/ProyectoPHP-AnalizadoresLSS" target="_blank">ProyectoPHP-AnalizadoresLSS</a> - Analizadores léxicos y sintácticos en PHP.</li>
-        <li><a href="https://github.com/kathyforero/Proyecto-EstructurasDeDatos" target="_blank">Proyecto-EstructurasDeDatos</a> - Estructuras de datos en Java.</li>
-        <li><a href="https://github.com/DERS0214/ESTADISTICA-PROYECTO" target="_blank">ESTADISTICA-PROYECTO</a> - Análisis estadístico con R.</li>
-        <li><a href="https://github.com/DERS0214/ED-Proyecto-2P" target="_blank">ED-Proyecto-2P</a> - Juego de preguntas en Java con árboles.</li>
-      </ul>
+      <div class="proyectos-container">
+        <div class="tarjeta tarjeta-proyecto">
+          <img src="https://placehold.co/200x200.png" alt="Foto del Proyecto" class="icono-proyecto" />
+          <h3><a href="https://github.com/kathyforero/LP-FINAL" target="_blank">LP-FINAL</a></h3>
+          <p>Proyecto final de lenguajes de programación en equipo.</p>
+        </div>
+
+        <div class="tarjeta tarjeta-proyecto">
+          <img src="https://placehold.co/200x200.png" alt="Foto del Proyecto" class="icono-proyecto" />
+          <h3><a href="https://github.com/kathyforero/ProyectoPHP-AnalizadoresLSS" target="_blank">ProyectoPHP-AnalizadoresLSS</a></h3>
+          <p>Analizadores léxicos y sintácticos en PHP.</p>
+        </div>
+
+        <div class="tarjeta tarjeta-proyecto">
+          <img src="https://placehold.co/200x200.png" alt="Foto del Proyecto" class="icono-proyecto" />
+          <h3><a href="https://github.com/kathyforero/Proyecto-EstructurasDeDatos" target="_blank">Proyecto-EstructurasDeDatos</a></h3>
+          <p>Estructuras de datos en Java.</p>
+        </div>
+
+        <div class="tarjeta tarjeta-proyecto">
+          <img src="https://placehold.co/200x200.png" alt="Foto del Proyecto" class="icono-proyecto" />
+          <h3><a href="https://github.com/DERS0214/ESTADISTICA-PROYECTO" target="_blank">ESTADISTICA-PROYECTO</a></h3>
+          <p>Análisis estadístico con R.</p>
+        </div>
+
+        <div class="tarjeta tarjeta-proyecto">
+          <img src="https://placehold.co/200x200.png" alt="Foto del Proyecto" class="icono-proyecto" />
+          <h3><a href="https://github.com/DERS0214/ED-Proyecto-2P" target="_blank">ED-Proyecto-2P</a></h3>
+          <p>Juego de preguntas en Java con árboles.</p>
+        </div>
+      </div>
     </section>
 
     <section id="redes" class="seccion contacto">
@@ -129,62 +172,32 @@
       <p>Email: <a href="mailto:dramirez021487@gmail.com">dramirez021487@gmail.com</a></p>
       <p>LinkedIn: <a href="https://linkedin.com/in/ders0214/" target="_blank">linkedin.com/in/ders0214</a></p>
       <p>GitHub: <a href="https://github.com/DERS0214" target="_blank">github.com/DERS0214</a></p>
-      <p>Instagram: <a href="https://instagram.com/DERS0214" target="_blank">@DERS0214</a></p>
-
-      <div class="mapa-fiec">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.9642820199942!2d-79.9678577304956!3d-2.1479647999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d13c1e2e2e2e3%3A0x7e2e2e2e2e2e2e2e!2sFIEC%20-%20Facultad%20de%20Ingenier%C3%ADa%20en%20Electricidad%20y%20Computaci%C3%B3n%20-%20ESPOL!5e0!3m2!1ses-419!2sec!4v1716138000000!5m2!1ses-419!2sec"
-          width="100%" height="250" style="border:0;display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-      <!-- Fin mapa -->
     </section>     
-
-    <section id="contacto-form" class="seccion contacto">
-      <h2 class="subtitle">Formulario de Contacto</h2>
-      <form action="#" method="post" style="display: flex; flex-direction: column; gap: 18px; max-width: 500px; margin: 0 auto;">
-        <label for="nombre">Nombre completo:</label>
-        <input type="text" id="nombre" name="nombre" required autocomplete="name" />
-
-        <label for="motivo">Motivo de contacto:</label>
-        <select id="motivo" name="motivo" required>
-          <option value="">Seleccione una opción</option>
-          <option value="consulta">Consulta</option>
-          <option value="propuesta">Propuesta laboral</option>
-          <option value="otro">Otro</option>
-        </select>
-
-        <fieldset style="border:none; padding:0;">
-          <legend>¿Cómo prefieres ser contactado?</legend>
-          <label><input type="radio" name="contacto" value="email" required /> Email</label>
-          <label><input type="radio" name="contacto" value="telefono" required /> Teléfono</label>
-          <label><input type="radio" name="contacto" value="whatsapp" required /> WhatsApp</label>
-        </fieldset>
-
-        <label for="lenguajes">Lenguajes de interés (puede seleccionar varios):</label>
-        <select id="lenguajes" name="lenguajes[]" multiple required size="4">
-          <option value="java">Java</option>
-          <option value="python">Python</option>
-          <option value="javascript">JavaScript</option>
-          <option value="dart">Dart</option>
-          <option value="php">PHP</option>
-          <option value="otro">Otro</option>
-        </select>
-
-        <label for="mensaje">Mensaje:</label>
-        <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escriba su mensaje aquí..."></textarea>
-
-        <button type="submit" style="background: var(--color-acento); color: #fff; border: none; border-radius: 5px; padding: 10px 0; font-size: 1rem; font-weight: bold; cursor: pointer;">Enviar</button>
-      </form>
-      
-    </section>
-    <section id="video" class="seccion video">
-      <h2 class="subtitle">Video</h2>
-    <div style="margin: 32px auto; max-width: 560px;">
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/z9fS0fj-xTU" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
   </main>
 
   <footer>
+    <div class="footer-container">
+      <section id="video" class="seccion video sin-fondo">
+        <h2 class="subtitle">Video</h2>
+        <div style="margin: 32px auto; max-width: 560px;">
+          <iframe width="100%" height="250" src="https://www.youtube.com/embed/z9fS0fj-xTU" title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <section id="contacto-form" class="seccion contacto sin-fondo">
+        <h2 class="subtitle">Formulario de Contacto</h2>
+        <form action="#" method="post" style="display: flex; flex-direction: column; gap: 18px; max-width: 500px; margin: 0 auto;">
+          <label for="nombre">Nombre completo:</label>
+          <input type="text" id="nombre" name="nombre" required autocomplete="name" />
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required placeholder="Escriba su mensaje aquí..."></textarea>
+
+          <button type="submit" style="background: var(--color-acento); color: #fff; border: none; border-radius: 5px; padding: 10px 0; font-size: 1rem; font-weight: bold; cursor: pointer;">Enviar</button>
+        </form>
+      </section>
+    </div>
+
     <p>&copy; 2025 David Ramírez - Todos los derechos reservados.</p>
   </footer>
 

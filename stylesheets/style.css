@@ -89,11 +89,6 @@ nav > ul {
   gap: 1rem; /* Espaciado uniforme entre elementos */
 }
 
-section > ul {
-  list-style: none;
-  
-}
-
 /* HEADER */
 header {
     background-color: var(--color-header);
@@ -105,8 +100,8 @@ header {
 /* MAIN */
 main {
     padding: 20px;
-    max-width: 900px;
     margin: 60px auto 0;
+    align-items: center;
 }
 
 /* SECCIONES */
@@ -130,12 +125,12 @@ main {
 }
 
 .seccion.personal     { border-left: 5px solid #3b82f6; }
-.seccion.educacion    { border-left: 5px solid #f59e0b; }
+.seccion.educacion    { border-left: 5px solid transparent; }
 .seccion.laboral      { border-left: 5px solid #10b981; }
 .seccion.habilidades  { border-left: 5px solid rgb(126, 41, 90); }
 .seccion.carrera      { border-left: 5px solid rgb(68, 239, 139); }
 .seccion.proyectos    { border-left: 5px solid #6366f1; } 
-.seccion.contacto     { border-left: 5px solid #ef4444; }
+.seccion.contacto     { border-left: 5px solid transparent; }
 
 
 :root[data-theme='dark'] .seccion h2 {
@@ -161,14 +156,14 @@ main {
 /* FOOTER */
 footer {
     text-align: center;
-    background-color: var(--color-header);
-    color: white;
-    padding: 15px;
+    background-color: var(--color-nav); /* Usar la variable para el color de fondo */
+    color: white; /* Color del texto */
+    padding: 10px; /* Reduce el padding para hacer el footer más pequeño */
 }
 
 footer p {
-  text-align: right;
-  font-style: italic;
+    text-align: right;
+    font-style: italic;
 }
 
 /* MENU HAMBURGUESA */
@@ -246,18 +241,16 @@ footer p {
 
 /* FORMULARIO */
 form {
-    background: var(--color-tarjeta);
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    padding: 28px 22px 22px 22px;
-    margin-top: 18px;
+    background: transparent; /* Elimina el fondo del formulario */
+    border: none; /* Elimina la barra roja */
+    padding: 0; /* Elimina el padding para reducir el tamaño */
     display: flex;
     flex-direction: column;
     gap: 18px;
 }
 form label, form legend {
     font-weight: 700;
-    color: var(--color-header);
+    color: white; /* Cambia el color del texto de las etiquetas a blanco */
     margin-bottom: 4px;
     letter-spacing: 0.01em;
 }
@@ -269,17 +262,17 @@ form input[type="text"],
 form select,
 form textarea {
     padding: 8px 10px;
-    border: 1.5px solid var(--color-borde);
+    border: 1.5px solid var(--color-acento); /* Cambia el color del borde si es necesario */
     border-radius: 6px;
     font-size: 1rem;
-    background: var(--color-fondo);
-    color: var(--color-texto);
+    background: transparent; /* Mantiene el fondo transparente */
+    color: white; /* Cambia el color del texto a blanco */
     transition: border-color 0.2s;
 }
 form input[type="text"]:focus,
 form select:focus,
 form textarea:focus {
-    border-color: var(--color-acento);
+    border-color: var(--color-borde); /* Cambia el color del borde al enfocar */
     outline: none;
 }
 form fieldset {
@@ -454,10 +447,6 @@ form select[multiple] {
   backdrop-filter: blur(5px);
 }
 
-:root[data-theme='dark'] .profile-card__info {
-  background: rgba(0, 0, 0, 0.2);
-}
-
 .profile-card__info h1 {
   font-size: 2.3rem;
   margin-bottom: 0.2em;
@@ -539,4 +528,100 @@ form select[multiple] {
     form {
         padding: 16px 6px 12px 6px;
     }
+}
+
+.educacion-experiencia-container {
+    display: flex; /* Alinea las secciones horizontalmente */
+    justify-content: space-between; /* Espacio entre las secciones */
+    max-width: 100%;
+    align-items: top;
+    margin: 0 auto;
+}
+
+.seccion {
+    flex: 1; /* Para que ambas ocupen el mismo espacio */
+    margin: 20px 20px; /* Espaciado entre bloques */
+    max-width: 100%;
+}
+
+.educacion-tarjetas, .experiencia-tarjetas {
+    flex: 1; /* Para que ambas ocupen el mismo espacio */
+    display: flex;
+    flex-direction: column; /* Tarjetas verticales */
+    gap: 20px;
+    margin: 0 10px; /* Espaciado entre bloques */
+}
+
+.tarjeta {
+    display: flex; /* Alinea el ícono y el texto horizontalmente */
+    align-items: center; /* Alinea verticalmente el ícono y el texto */
+    margin-bottom: 20px; /* Espaciado entre tarjetas */
+    background-color: var(--color-tarjeta);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover {
+    transform: scale(1.02);
+}
+
+.institucion-icono {
+    display: flex; /* Alinea el ícono y el texto horizontalmente */
+    align-items: center; /* Alinea verticalmente el ícono y el texto */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.icono-institucion {
+    width: 40px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantiene la proporción del ícono */
+    max-width: 100%; /* Asegura que el ícono no exceda el tamaño del contenedor */
+}
+
+.sin-fondo {
+    background-color: transparent; /* Mantiene el fondo transparente */
+    color: white; /* Cambia el color del texto a blanco */
+}
+
+.sin-fondo h2 {
+    color: white; /* Asegura que los títulos sean blancos */
+}
+
+.footer-container {
+    display: flex; /* Alinea las secciones horizontalmente */
+    justify-content: space-between; /* Espacio entre las secciones */
+    align-items: flex-start; /* Alineación vertical al inicio */
+    margin: 0 auto; /* Centra el contenedor */
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+}
+
+.tarjeta-proyecto {
+    display: flex; /* Alinea el contenido de la tarjeta */
+    flex-direction: column; /* Coloca la imagen arriba y el texto abajo */
+    align-items: center; /* Centra el contenido horizontalmente */
+    width: 200px; /* Ancho fijo para hacerlas cuadradas */
+    margin: 15px; /* Espaciado entre tarjetas */
+    background-color: var(--color-tarjeta); /* Color de fondo de la tarjeta */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra de la tarjeta */
+    transition: transform 0.3s; /* Efecto de hover */
+}
+
+.tarjeta-proyecto:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+}
+
+.tarjeta-proyecto .icono-proyecto {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 4px; /* Bordes redondeados para la imagen */
+}
+
+.proyectos-container {
+    display: flex; /* Alinea las tarjetas horizontalmente */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan en varias filas */
+    justify-content: space-around; /* Espacio entre las tarjetas */
+    margin: 0 auto; /* Centra el contenedor */
 }
